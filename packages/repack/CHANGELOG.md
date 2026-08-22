@@ -1,5 +1,23 @@
 # @callstack/repack
 
+## 5.4.0
+
+### Minor Changes
+
+- [#1430](https://github.com/callstack/repack/pull/1430) [`33df89a`](https://github.com/callstack/repack/commit/33df89a735314be29cc8bc6f8e23f8d139164aa8) Thanks [@jbroma](https://github.com/jbroma)! - Bring the Rspack development experience in line with Webpack by compiling each
+  platform only when its bundle is first requested. Multi-platform development
+  servers no longer eagerly build unused platforms, so launching an iOS app does
+  not wait for Android to compile, and vice versa.
+
+- [#1424](https://github.com/callstack/repack/pull/1424) [`8dcc116`](https://github.com/callstack/repack/commit/8dcc116c291fe7fb7eb9f0f6c9640058e83a9c50) Thanks [@jbroma](https://github.com/jbroma)! - Add the unified `@callstack/repack/commands` entry point with automatic bundler detection and a `--bundler` override. Re.Pack Init now uses it, while bundler-specific entry points remain available with deprecation warnings.
+
+### Patch Changes
+
+- [#1424](https://github.com/callstack/repack/pull/1424) [`8dcc116`](https://github.com/callstack/repack/commit/8dcc116c291fe7fb7eb9f0f6c9640058e83a9c50) Thanks [@jbroma](https://github.com/jbroma)! - Reject pending webpack asset requests when compilation fails instead of leaving requests hanging.
+
+- Updated dependencies []:
+  - @callstack/repack-dev-server@5.4.0
+
 ## 5.3.0
 
 ### Minor Changes
